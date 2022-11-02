@@ -11,32 +11,26 @@
     <div class="calculator">
         <div class="screen"> </div>
         <div class="cleardelete">
-            <button onclick="clear()">Clear</button>
-            <button onclick="del()">Delete</button>
+            <button onclick="del('all')">Clear</button>
+            <button onclick="del('one')">Delete</button>
         </div>
-        <div class="line1">
+        <div class="matrice">
             <button onclick="addtoString('7')">7</button>
             <button onclick="addtoString('8')">8</button>
             <button onclick="addtoString('9')">9</button>
-            <button onclick="addtoString(' / ')">/</button>
-        </div>
-        <div class="line2">
+            <button onclick="addOperator(' / ')">/</button>
             <button onclick="addtoString('4')">4</button>
             <button onclick="addtoString('5')">5</button>
             <button onclick="addtoString('6')">6</button>
-            <button onclick="addtoString(' * ')">*</button>
-        </div>
-        <div class="line3">
+            <button onclick="addOperator(' * ')">*</button>
             <button onclick="addtoString('1')">1</button>
             <button onclick="addtoString('2')">2</button>
             <button onclick="addtoString('3')">3</button>
-            <button onclick="addtoString(' - ')">-</button>
-        </div>
-        <div class="line5">
+            <button onclick="addOperator(' - ')">-</button>
             <button onclick="addtoString('.')">.</button>
             <button onclick="addtoString('0')">0</button>
             <button onclick="operate(string)">=</button>
-            <button onclick="addtoString(' + ')">+</button>
+            <button onclick="addOperator(' + ')">+</button>
         </div>
     </div>
 </body>

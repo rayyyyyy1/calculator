@@ -1,9 +1,19 @@
 let string="";
-//repara clear, repara sa mearga cu 0 la inceput daca apesi doar operatorul
+// mai ai cateva buguri dupa ce apesi = nu mai merge clear si delete, idk why
+    let gicu=document.querySelectorAll('.matrice button')
+    gicu.forEach((buton)=>{buton.classList.add('buton');})
 
 function addtoString(thing){
     string=string+thing;
     document.querySelector('.screen').textContent=string;
+}
+function addOperator(thing){
+    if(string=="")
+        {   string=`0 ${thing}`;
+            document.querySelector('.screen').textContent=string;
+        }
+        else {string=string+thing;
+            document.querySelector('.screen').textContent=string;}
 }
 function operate(string){
     const elements= string.split(' ');
@@ -29,14 +39,13 @@ function operate(string){
     showResult(res);
 }
 function showResult(res){
-    string='';
-    document.querySelector('.screen').textContent=res;
-}
-function clear(){
-    string='';
+    string=res;
     document.querySelector('.screen').textContent=string;
 }
-function del(){
-    string=string.slice(0,-1);
+
+function del(hehe){
+    if(hehe=='one')
+        string=string.slice(0,-1);
+        else string=string.slice(0,0);
     document.querySelector('.screen').textContent=string;
 }
